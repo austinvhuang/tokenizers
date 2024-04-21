@@ -414,6 +414,7 @@ impl BpeTrainer {
         word_counts: &HashMap<String, u32>,
         model: &mut BPE,
     ) -> Result<Vec<AddedToken>> {
+	#![allow(invalid_reference_casting)]
         let mut word_to_id: HashMap<String, u32> = HashMap::with_capacity(self.vocab_size);
         let mut id_to_word: Vec<String> = Vec::with_capacity(self.vocab_size);
 
