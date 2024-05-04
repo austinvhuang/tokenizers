@@ -8,5 +8,6 @@ class Libtokenizers < Formula
   def install
     system "bash", "-c", "install -d #{lib}"
     system "bash", "-c", "cp -a lib/* #{lib}"
+    system "bash", "-c", "chmod +x #{lib}/*"
   end
 end
